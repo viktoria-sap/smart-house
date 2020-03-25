@@ -20,7 +20,7 @@ public class Condition {
         return increaseCurrentTemperature;
     }
 
-    public void setIncreaseCurrentTemperature() {
+    public void setIncreaseCurrentTemperature(int increaseCurrentTemperature) {
         if (increaseCurrentTemperature < currentTemperature) {
             return;
         }
@@ -35,7 +35,7 @@ public class Condition {
         return decreaseCurrentTemperature;
     }
 
-    public void setDecreaseCurrentTemperature() {
+    public void setDecreaseCurrentTemperature(int decreaseCurrentTemperature) {
         if (decreaseCurrentTemperature > currentTemperature) {
             return;
         }

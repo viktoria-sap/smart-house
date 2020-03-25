@@ -1,22 +1,38 @@
 package ru.netology;
 
-public class Radio {
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
-    private int maxStation;
-    private int minStation;
+    @RequiredArgsConstructor
+    public class Radio {
+    private int maxStation = 10;
+    private int minStation = 0;
     private int numberCurrentStation;
     private int nextStation;
     private int prevStation;
     boolean next;
     boolean prev;
 
-    private int maxVolume;
-    private int minVolume;
+    public Radio(int maxStation, int numberCurrentStation, boolean next, boolean prev) {
+        this.maxStation = maxStation;
+        this.numberCurrentStation = numberCurrentStation;
+        this.next = next;
+        this.prev = prev;
+    }
+
+    private int maxVolume = 100;
+    private int minVolume = 0;
     private int currentVolume;
     private int increaseCurrentVolume;
     private int decreaseCurrentVolume;
     boolean increase;
     boolean decrease;
+
+    public Radio(int currentVolume, boolean increase, boolean decrease) {
+        this.currentVolume = currentVolume;
+        this.increase = increase;
+        this.decrease = decrease;
+    }
 
     public boolean isNext(boolean b) {
         return next;
@@ -75,7 +91,7 @@ public class Radio {
         }
         numberCurrentStation -= 1;
         if (numberCurrentStation < minStation) {
-            numberCurrentStation = 9;
+            numberCurrentStation = maxStation;
         }
         this.prevStation = numberCurrentStation;
     }
