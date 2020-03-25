@@ -6,10 +6,10 @@ class RadioTest {
     @Test
     public void shouldNextStation() {
         Radio radio = new Radio(
-                20,
-                5,
-                false,
-                true
+            20,
+            5,
+            false,
+            true
         );
 
         assertEquals(5, radio.getNumberCurrentStation());

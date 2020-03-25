@@ -1,7 +1,10 @@
 package ru.netology;
 
-public class Radio {
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
+    @RequiredArgsConstructor
+    public class Radio {
     private int maxStation = 10;
     private int minStation = 0;
     private int numberCurrentStation;
