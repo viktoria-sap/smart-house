@@ -21,14 +21,11 @@ public class Condition {
     }
 
     public void setIncreaseCurrentTemperature() {
-        if (increaseCurrentTemperature < currentTemperature) {
-            return;
-        }
-        if (increaseCurrentTemperature > maxTemperature) {
-            return;
-        }
         currentTemperature += 1;
-        this.increaseCurrentTemperature = currentTemperature;
+        if (currentTemperature > maxTemperature) {
+            return;
+        }
+        else this.increaseCurrentTemperature = currentTemperature;
     }
 
     public int getDecreaseCurrentTemperature() {
@@ -36,14 +33,11 @@ public class Condition {
     }
 
     public void setDecreaseCurrentTemperature() {
-        if (decreaseCurrentTemperature > currentTemperature) {
-            return;
-        }
-        if (decreaseCurrentTemperature < minTemperature) {
-            return;
-        }
         currentTemperature -= 1;
-        this.decreaseCurrentTemperature = currentTemperature;
+        if (currentTemperature < minTemperature) {
+            return;
+        }
+        else this.decreaseCurrentTemperature = currentTemperature;
     }
 
     public void setMaxTemperature(int maxTemperature) {

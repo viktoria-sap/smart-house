@@ -16,22 +16,8 @@ class ConditionTest {
         condition.setCurrentTemperature(20);
 
         assertEquals( 20, condition.getCurrentTemperature());
-        condition.setIncreaseCurrentTemperature(21);
+        condition.setIncreaseCurrentTemperature();
         assertEquals( 21, condition.getIncreaseCurrentTemperature());
-    }
-
-    @Test
-    public void shouldIncreaseCurrentTemperature1() {
-        Condition condition1 = new Condition();
-
-        condition1.setMaxTemperature(30);
-        condition1.setMinTemperature(15);
-
-        condition1.setCurrentTemperature(25);
-
-        assertEquals(25, condition1.getCurrentTemperature());
-        condition1.setIncreaseCurrentTemperature(24);
-        assertEquals(0, condition1.getIncreaseCurrentTemperature());
     }
 
     @Test
@@ -44,7 +30,7 @@ class ConditionTest {
         condition2.setCurrentTemperature(30);
 
         assertEquals(30, condition2.getCurrentTemperature());
-        condition2.setIncreaseCurrentTemperature(31);
+        condition2.setIncreaseCurrentTemperature();
         assertEquals(0, condition2.getIncreaseCurrentTemperature());
     }
 
@@ -58,22 +44,8 @@ class ConditionTest {
         condition.setCurrentTemperature(20);
 
         assertEquals( 20, condition.getCurrentTemperature());
-        condition.setDecreaseCurrentTemperature(19);
+        condition.setDecreaseCurrentTemperature();
         assertEquals( 19, condition.getDecreaseCurrentTemperature());
-    }
-
-    @Test
-    public void shouldDecreaseCurrentTemperature1(){
-        Condition condition1 = new Condition();
-
-        condition1.setMaxTemperature(30);
-        condition1.setMinTemperature(15);
-
-        condition1.setCurrentTemperature(20);
-
-        assertEquals( 20, condition1.getCurrentTemperature());
-        condition1.setDecreaseCurrentTemperature(21);
-        assertEquals( 0, condition1.getDecreaseCurrentTemperature());
     }
 
     @Test
@@ -86,7 +58,7 @@ class ConditionTest {
         condition2.setCurrentTemperature(15);
 
         assertEquals( 15, condition2.getCurrentTemperature());
-        condition2.setDecreaseCurrentTemperature(14);
+        condition2.setDecreaseCurrentTemperature();
         assertEquals( 0, condition2.getDecreaseCurrentTemperature());
     }
 
