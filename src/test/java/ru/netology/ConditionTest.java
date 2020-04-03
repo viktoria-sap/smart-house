@@ -21,7 +21,7 @@ class ConditionTest {
     }
 
     @Test
-    public void shouldIncreaseCurrentTemperature2() {
+    public void shouldIncreaseCurrentTemperatureMax() {
         Condition condition2 = new Condition();
 
         condition2.setMaxTemperature(30);
@@ -49,7 +49,7 @@ class ConditionTest {
     }
 
     @Test
-    public void shouldDecreaseCurrentTemperature2(){
+    public void shouldDecreaseCurrentTemperatureMin(){
         Condition condition2 = new Condition();
 
         condition2.setMaxTemperature(30);
