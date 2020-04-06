@@ -4,9 +4,6 @@ public class Condition {
     private int maxTemperature;
     private int minTemperature;
     private int currentTemperature;
-    private int increaseCurrentTemperature;
-    private int decreaseCurrentTemperature;
-
 
     public int getCurrentTemperature() {
         return currentTemperature;
@@ -16,28 +13,18 @@ public class Condition {
         this.currentTemperature = currentTemperature;
     }
 
-    public int getIncreaseCurrentTemperature() {
-        return increaseCurrentTemperature;
-    }
-
-    public void setIncreaseCurrentTemperature() {
-        currentTemperature += 1;
-        if (currentTemperature > maxTemperature) {
+    public void increaseCurrentTemperature() {
+        if (currentTemperature >= maxTemperature) {
             return;
         }
-        else this.increaseCurrentTemperature = currentTemperature;
+        currentTemperature += 1;
     }
 
-    public int getDecreaseCurrentTemperature() {
-        return decreaseCurrentTemperature;
-    }
-
-    public void setDecreaseCurrentTemperature() {
-        currentTemperature -= 1;
+    public void decreaseCurrentTemperature() {
         if (currentTemperature < minTemperature) {
             return;
         }
-        else this.decreaseCurrentTemperature = currentTemperature;
+        currentTemperature -= 1;
     }
 
     public void setMaxTemperature(int maxTemperature) {
