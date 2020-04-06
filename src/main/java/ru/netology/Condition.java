@@ -21,7 +21,7 @@ public class Condition {
     }
 
     public void decreaseCurrentTemperature() {
-        if (currentTemperature < minTemperature) {
+        if (currentTemperature <= minTemperature) {
             return;
         }
         currentTemperature -= 1;

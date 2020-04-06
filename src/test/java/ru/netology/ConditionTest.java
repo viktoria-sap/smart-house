@@ -31,7 +31,7 @@ class ConditionTest {
 
         assertEquals(30, condition2.getCurrentTemperature());
         condition2.increaseCurrentTemperature();
-        assertEquals(0, condition2.getCurrentTemperature());
+        assertEquals(30, condition2.getCurrentTemperature());
     }
 
     @Test
@@ -59,7 +59,7 @@ class ConditionTest {
 
         assertEquals( 15, condition2.getCurrentTemperature());
         condition2.decreaseCurrentTemperature();
-        assertEquals( 0, condition2.getCurrentTemperature());
+        assertEquals( 15, condition2.getCurrentTemperature());
     }
 
 }
